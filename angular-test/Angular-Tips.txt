@@ -1,0 +1,73 @@
+Angular
+
+- HTML Custom Atribute
+	- you can define any custom attribute in html. Agular uses ng- prefix.
+
+- JavaScript Global Namespace
+	- the global namespace is common. Objects declared in imported js files use the same namespace.
+	A variable in the global namespace will be overriden by the one defined in curent js file.
+	- Use objects to encapsulate vars in order not polute the global namespace.
+
+	
+- JavaScript Dependency Injection
+	- simply send an object as parameter to a function
+	
+- JavaScript function to String
+	- you can save a function as string
+	searchPeople.toString() - returns:
+	"function (firstName, lastName, height, age) {
+		return 'Jane Doe';
+	}"
+	
+- Angular Dependency Injection
+	- Angular parses the method parameter names as strings. If he knows one of the objects he will inject it in the method.
+	
+- Angular Services
+	- All angular services can be found in the Angular Api reference
+	- $log - offers different levels of logging
+	- you can find any angular module on nr-modules.org
+
+- Angular interpolation
+	- replacing a variable with its value in the view
+	- Angular does that automatically if it is sorounded by {{ }}
+
+- Angular directives
+	- ng-model - binds the element to a variable in the model
+	
+- JavaScript Event Listener
+	- javascript runs a loop permanently that checks if there are any new events
+	- events: keypress, click, mouseover, change
+	
+- Angular Watchers and the Digest Loop
+	- extends the event loop to automatically control the binding between model and view
+	- for every var in the model Angular adds watchers for change events
+	- Angular's event loop is called digest loop
+	- you can add your own watch code
+	- if javascript events are happening outside the $scope context, Angular digest look will fail to see it
+
+- Angular Common Directives
+	- ng-if="condition" - include element if true
+	- ng-show/ng-hide="condition" - show/hide element if true
+	- ng-repeat="rule in rules" - loop through rules array(from $scope)
+	- ng-click="myFunction()" - on click event
+	- there are directives for all events
+	- ng-cloack - hides the element in the dom until ng works on it
+	
+- Angular Multiple Controllers
+	- ng can use multiple controllers in the same page
+	- each controller has it's own scope, thus the variables from different scopes will not get into conflicts
+	
+- Angular Single Page Application
+	- ng-route - service for routing inside the page.
+	- contains $routeProvider -  can define actions for each routing address.
+		- similar to java switch
+		- .when('/route', {})
+	- you can use $routeParams to define path variables
+		- the variables are marked in the path with ":" in front - /my-path/:id
+		- the variable is accessed with $routeParams.id
+		
+
+
+
+
+	
